@@ -1,10 +1,11 @@
 import os
 import weave
-from ragas.metrics import LLMContextRecall
+from ragas.metrics import LLMContextRecall, Faithfulness, FactualCorrectness
 from ragas import SingleTurnSample
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.rate_limiters import InMemoryRateLimiter
 from ragas.llms import LangchainLLMWrapper
+from langchain_core.messages import BaseMessage
 
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 LLM_MODEL = "gemini-2.0-flash-lite-preview-02-05"
@@ -28,6 +29,32 @@ async def context_recall(output, query, reference):
     scorer = LLMContextRecall(llm=evaluator_llm)
     sample = SingleTurnSample(
         user_input=query, retrieved_contexts=output, reference=reference
+    )
+    score = await scorer.single_turn_ascore(sample)
+    return score
+
+#https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/faithfulness/?h=faithfulness#faithfulness
+"""Decomposes the generated response into individual claims and verifies if each claim can be inferred from the context.
+and returns a score in the range (0,1)
+$Final score = VerifiedClaims / TotalClaims$
+"""
+@weave.op()
+async def faithfulness(output: BaseMessage, query, expected_contexts):
+    scorer = Faithfulness(llm=evaluator_llm)
+    sample = SingleTurnSample(
+        user_input=query, response=output.content, retrieved_contexts=expected_contexts
+    )
+    score = await scorer.single_turn_ascore(sample)
+    return score
+
+#https://docs.ragas.io/en/stable/concepts/metrics/available_metrics/factual_correctness/
+"""Dicomposes the claims in both generated and referecne text and computes TP, FP, FN from the claims.
+This is then used to compute Precision, F1 and Accuray depending upon the 'mode' param value. Defualt is F1"""
+@weave.op()
+async def factual_correctness(output: BaseMessage, query, reference):
+    scorer = FactualCorrectness(llm=evaluator_llm)
+    sample = SingleTurnSample(
+        user_input=query, response=output.content, reference=reference
     )
     score = await scorer.single_turn_ascore(sample)
     return score
