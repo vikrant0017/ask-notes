@@ -1,0 +1,20 @@
+dataset:
+  path: sample_datasets/examples1.jsonl
+retriever:
+  name: SimpleRetriever
+  experiment_name: Test Retriver
+  params:
+    model: nomic-embed-text
+  scorers:
+    - context_recall
+generator:
+  name: ResponseGenerator
+  experiment_name: Test Generator
+  params:
+    model: qwen2.5:3b
+  # prompt_template:
+  #   path: ''
+  scorers:
+    - faithfulness
+    - factual_correctness
+
