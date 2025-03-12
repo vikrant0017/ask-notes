@@ -1,0 +1,156 @@
+{"question":"Applications of machine learning are all around us","answer":"True"}
+{"question":"What is the technical difference between classical ML and deep learning?","answer":"the use of neural networks"}
+{"question":"Why might a business want to use ML strategies?","answer":"both of the above"}
+{"question":"Machine learning algorithms are meant to simulate","answer":"the human brain"}
+{"question":"What is an example of a classical ML technique?","answer":"natural language processing"}
+{"question":"Why should everyone learn the basics of ML?","answer":"both of the above"}
+{"question":"Approximately when was the term 'artificial intelligence' coined?","answer":"1950s"}
+{"question":"Who was one of the early pioneers of machine learning?","answer":"Alan Turing"}
+{"question":"What is one of the reasons that advancement in AI slowed in the 1970s?","answer":"Limited compute power"}
+{"question":"What's an example of a 'scruffy' AI system?","answer":"ELIZA"}
+{"question":"What is an example of a technology that was developed during 'The Golden Years'?","answer":"Blocks world"}
+{"question":"Which event was foundational in the creation and expansion of the field of artificial intelligence?","answer":"Dartmouth Summer Research Project"}
+{"question":"Unfairness in Machine Learning can happen","answer":"both of the above"}
+{"question":"The term 'unfairness' in ML connotes:","answer":"harms for a group of people"}
+{"question":"The five main types of harms include","answer":"allocation, quality of service, stereotyping, denigration, and over- or under- representation"}
+{"question":"Unfairness in a model can be caused by","answer":"over reliance on historical data"}
+{"question":"To mitigate unfairness, you can","answer":"both the above"}
+{"question":"Fairlearn is a package that can","answer":"compare multiple models by using fairness and performance metrics"}
+{"question":"When building a model, you should:","answer":"prepare your data, then train your model"}
+{"question":"Your data's ___ will impact the quality of your ML model","answer":"both of the above"}
+{"question":"A feature variable is:","answer":"a measurable property of your data"}
+{"question":"You should visualize your data because","answer":"both of these"}
+{"question":"Split your data into:","answer":"training and test sets"}
+{"question":"A common command to start the training process in various ML libraries is:","answer":"model.fit"}
+{"question":"Which of these variables is a numeric variable?","answer":"Height"}
+{"question":"Which of these variables is a categorical variable?","answer":"Blood Type"}
+{"question":"Which of these problems is a Regression analysis-based problem?","answer":"Predicting the final exam marks of a student"}
+{"question":"If your Machine Learning model's training accuracy is 95 % and the testing accuracy is 30 %, then what type of condition it is called?","answer":"Overfitting"}
+{"question":"The process of identifying significant features from a set of features is called:","answer":"Feature Selection"}
+{"question":"The process of splitting a dataset into a certain ratio of training and testing dataset using Scikit Learn's 'train_test_split()' method\/function is called:","answer":"Hold-Out Validation"}
+{"question":"Which of these Python modules is used to plot the visualization of data?","answer":"Matplotlib"}
+{"question":"If you want to understand the spread or the other characteristics of data points of your dataset, then perform:","answer":"Data Visualization"}
+{"question":"Which of these is a part of the Data Visualization step in a Machine Learning project?","answer":"Creating a pictorial representation of data using different plotting methods"}
+{"question":"Which of these code snippets is correct based on this lesson, if you want to check for the presence of missing values in your dataset? Suppose the dataset is stored in a variable named 'dataset' which is a Pandas DataFrame object.","answer":"dataset.isnull().sum()"}
+{"question":"Which of these plotting methods is useful when you would like to understand the spread of different groups of datapoints from your dataset?","answer":"Bar Plot"}
+{"question":"What can Data Visualization NOT tell you?","answer":"The source from where the dataset is collected"}
+{"question":"Matplotlib is a ","answer":"data visualization library"}
+{"question":"Linear Regression uses the following to plot relationships between variables","answer":"a straight line"}
+{"question":"A good Linear Regression model has a ___ Correlation Coefficient","answer":"high"}
+{"question":"If your data is nonlinear, try a ___ type of Regression","answer":"polynomial"}
+{"question":"These are all types of Regression methods","answer":"Stepwise, Ridge, Lasso and Elasticnet"}
+{"question":"Least-Squares Regression means that all the datapoints surrounding the regression line are:","answer":"squared and then added up"}
+{"question":"Use Logistic Regression to predict","answer":"whether an apple is ripe or not"}
+{"question":"Types of Logistic Regression include","answer":"multinomial and ordinal"}
+{"question":"Your data has weak correlations. The best type of Regression to use is:","answer":"Logistic"}
+{"question":"Seaborn is a type of","answer":"data visualization library"}
+{"question":"A confusion matrix is also known as a:","answer":"error matrix"}
+{"question":"A good model will have:","answer":"a large number of true positives and true negatives in its confusion matrix"}
+{"question":"What does ONNX stand for?","answer":"Open Neural Network Exchange"}
+{"question":"How is Flask defined by its creators?","answer":"micro-framework"}
+{"question":"What does the Pickle module of Python do","answer":"Serializes and De-serializes a Python Object"}
+{"question":"What are the tools we can use to host a pre-trained model on the web using Python?","answer":"Flask"}
+{"question":"What does SaaS stand for?","answer":"Software as a Service"}
+{"question":"What does Scikit-learn's LabelEncoder library do?","answer":"Encodes data alphabetically"}
+{"question":"Classification is a form of supervised learning that has a lot in common with","answer":"Regression techniques"}
+{"question":"What question can classification help answer?","answer":"Is this email spam or not?"}
+{"question":"What is the first step to using Classification techniques?","answer":"cleaning and balancing your data"}
+{"question":"What is a multiclass question?","answer":"the task of classifying data points into one of several classes"}
+{"question":"It's important to clean out recurrent or unhelpful data to help your classifiers solve your problem.","answer":"true"}
+{"question":"What's the best reason to balance your data?","answer":"Balancing your data yields better results because an ML model won't skew towards one class"}
+{"question":"Balanced, clean data yields the best classification results","answer":"true"}
+{"question":"How do you choose the right classifier?","answer":"Both of the above"}
+{"question":"Classification is a type of","answer":"Supervised Learning"}
+{"question":"What is a 'solver'?","answer":"the algorithm to use in the optimization problem"}
+{"question":"Which classifier did we use in this lesson?","answer":"Logistic Regression"}
+{"question":"How do you know if the classification algorithm is working as expected?","answer":"By checking the accuracy of its predictions"}
+{"question":"A good initial classifier to try is:","answer":"Linear SVC"}
+{"question":"Regularization controls:","answer":"the influence of parameters"}
+{"question":"K-Neighbors classifier can be used for:","answer":"both of these"}
+{"question":"Support-Vector classifiers can be used for","answer":"both of these"}
+{"question":"Random Forest is a ___ type of classifier","answer":"Ensemble"}
+{"question":"Adaboost is known for:","answer":"focusing on the weights of incorrectly classified items"}
+{"question":"Recommendation systems might be used for","answer":"Both of these"}
+{"question":"Embedding a model in a web app helps it to be offline-capable","answer":"true"}
+{"question":"Onnx Runtime can be used for","answer":"Running models in a web app"}
+{"question":"Netron app helps you:","answer":"Visualize your model's structure"}
+{"question":"Convert your Scikit-learn model for use with Onnx using:","answer":"sklearn-onnx"}
+{"question":"Using your model in a web app is called:","answer":"inference"}
+{"question":"A real-life example of clustering would be","answer":"Sorting the laundry"}
+{"question":"Clustering techniques can be used in these industries","answer":"both of these"}
+{"question":"Clustering is a type of:","answer":"unsupervised learning"}
+{"question":"Euclidean geometry is arranged along","answer":"planes"}
+{"question":"The density of your clustering data is related to its","answer":"noise"}
+{"question":"The best-known clustering algorithm is","answer":"k-means"}
+{"question":"K-Means is derived from:","answer":"signal processing"}
+{"question":"A good Silhouette score means:","answer":"clusters are well-separated and well-defined"}
+{"question":"Variance is:","answer":"both of these"}
+{"question":"A Voronoi diagram shows:","answer":"a cluster's seed and its region"}
+{"question":"Inertia is","answer":"a measure of how internally coherent clusters are"}
+{"question":"Using K-Means, you must first determine the value of 'k'","answer":"true"}
+{"question":"What does NLP stand for in these lessons?","answer":"natural language processing"}
+{"question":"Eliza was an early bot that acted as a computer","answer":"therapist"}
+{"question":"Alan Turing's 'Turing Test' tried to determine if a computer was","answer":"both of the above"}
+{"question":"Joseph Weizenbaum invented the bot","answer":"Eliza"}
+{"question":"A conversational bot gives output based on","answer":"Both of these"}
+{"question":"How would you make the bot more effective?","answer":"By feeding it more data and training it accordingly"}
+{"question":"Tokenization","answer":"Splits text into separate tokens (words)"}
+{"question":"Embeddings","answer":"converts text data numerically so words can cluster"}
+{"question":"Parts-of-Speech Tagging","answer":"takes tokenized words and tags them by their part of speech"}
+{"question":"Build a dictionary of how often words reoccur using:","answer":"Word and Phrase Frequencies"}
+{"question":"N-grams refer to","answer":"A text can be split into sequences of words of a set length"}
+{"question":"Sentiment analysis","answer":"analyzes a phrase for positivity or negativity"}
+{"question":"Naive translation","answer":"translates words only"}
+{"question":"A *corpus* of texts refers to","answer":"A large number of texts"}
+{"question":"If a ML model has enough human translations to build a model on, it can","answer":"improve the accuracy of translations"}
+{"question":"Underlying TextBlob's translation library is:","answer":"Google Translate"}
+{"question":"To use `blob.translate` you need:","answer":"an internet connection"}
+{"question":"To determine sentiment, an ML approach would be to:","answer":"apply NLP techniques to manually generated opinions and scores and look for patterns"}
+{"question":"What information can we get from text that was written or spoken by a human?","answer":"both of the above"}
+{"question":"What is sentiment analysis?","answer":"a method of systematically identifying, extracting, quantifying, and studying affective states and subjective information"}
+{"question":"What question could be answered using a dataset of hotel reviews, Python, and sentiment analysis?","answer":"What are the most frequently used words and phrases in reviews?"}
+{"question":"What is the essence of NLP?","answer":"interpreting meaning or sentiment without having to have a human do it"}
+{"question":"What are some things you might look for while cleaning data?","answer":"both of the above"}
+{"question":"It is important to understand your data and its foibles before performing operations on it.","answer":"true"}
+{"question":"Why is it important to clean data before analyzing it?","answer":"Both of the above"}
+{"question":"What is one example of a strategy for cleaning data?","answer":"removing columns\/rows that aren't useful for answering a specific question"}
+{"question":"It can be useful to categorize data using a Tag column.","answer":"true"}
+{"question":"What is the goal of the dataset?","answer":"to add sentiment and columns that will help you choose the best hotel"}
+{"question":"What are stop words?","answer":"both of the above"}
+{"question":"To test the sentiment analysis, make sure it matches the reviewer's score for the same review.","answer":"true"}
+{"question":"Time Series Forecasting is useful in","answer":"both the above"}
+{"question":"A time series is a sequence taken at:","answer":"successive equally spaced points in time"}
+{"question":"Time series can be used in:","answer":"earthquake prediction"}
+{"question":"Time series trends are","answer":"Measurable increases and decreases over time"}
+{"question":"Outliers are","answer":"points far away from standard data variance"}
+{"question":"Time Series Forecasting is most useful for","answer":"Econometrics"}
+{"question":"ARIMA stands for","answer":"AutoRegressive Integrated Moving Average"}
+{"question":"Stationarity refers to","answer":"data whose distribution does not change when shifted in time"}
+{"question":"Differencing","answer":"eliminates trend and seasonality"}
+{"question":"ARIMA is used to make a model fit the special form of time series data","answer":"as closely as possible"}
+{"question":"Use SARIMAX to","answer":"manage seasonal ARIMA models"}
+{"question":"'Walk-Forward' validation involves","answer":"re-training a model progressively as it is validated"}
+{"question":"What is reinforcement learning?","answer":"a learning technique that deciphers the optimal behavior of an agent in some environment by running many experiments"}
+{"question":"What is a policy?","answer":"a function that returns the action at any given state"}
+{"question":"A reward function returns a score for each state of an environment.","answer":"true"}
+{"question":"What is Q-Learning?","answer":"both of the above"}
+{"question":"For what values does a Q-Table correspond to the random walk policy?","answer":"all equal values"}
+{"question":"It was better to use exploration than exploitation during the learning process in our lesson.","answer":"false"}
+{"question":"Chess and Go are games with continuous states.","answer":"false"}
+{"question":"What is the CartPole problem?","answer":"a simplified version of balancing"}
+{"question":"What tool can we use to play out different scenarios of potential states in a game?","answer":"simulation environments"}
+{"question":"Where do we define all possible actions in an environment?","answer":"action space"}
+{"question":"What pair did we use as the dictionary key-value?","answer":"(state, action) as the key, Q-Table entry as the value"}
+{"question":"What are the hyperparameters we used during Q-Learning?","answer":"learning rate, discount factor, exploration\/exploitation factor"}
+{"question":"What's an example of an ML application in the Finance industry?","answer":"Wealth management using linear regression"}
+{"question":"What ML technique can hospitals use to manage readmission?","answer":"Clustering"}
+{"question":"What is an example of using Time Series for energy management?","answer":"Smart parking meters"}
+{"question":"Which ML technique can be used to detect credit card fraud?","answer":"Clustering"}
+{"question":"Which ML technique is exemplified in forest management?","answer":"Reinforcement Learning"}
+{"question":"What's an example of an ML application in the Health Care industry?","answer":"Managing clinical trials using classifiers"}
+{"question":"SVM stands for","answer":"Support Vector Machine"}
+{"question":"Which of these ML techniques is used to predict continuous values?","answer":"Regression"}
+{"question":"Which of these models is popularly used for time series forecasting?","answer":"ARIMA"}
+{"question":"By which of these methods does an SVR learn?","answer":"Finding the best fit hyperplane that has the maximum number of data points"}
+{"question":"What is the purpose of a kernel in SVMs?","answer":"To transform the dataset to a higher dimension space"}
+{"question":"Which of these models consider the non-linearity in the dataset?","answer":"SVR using RBF kernel"}
