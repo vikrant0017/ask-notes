@@ -1,0 +1,56 @@
+{"question":"Which plotting method helps understand the spread of different groups of data points in a dataset?","answer":"Bar Plot"}
+{"question":"What is another name for a confusion matrix?","answer":"A confusion matrix is also known as an error matrix."}
+{"question":"Who is recognized as one of the early influential figures in the development of machine learning?","answer":"Alan Turing was one of the early pioneers of machine learning."}
+{"question":"What are the different types of Logistic Regression?","answer":"Multinomial and ordinal are types of Logistic Regression."}
+{"question":"What type of classifier is Random Forest?","answer":"Ensemble"}
+{"question":"Before performing operations on data, what is a crucial step to take?","answer":"It is important to understand your data and its foibles."}
+{"question":"What role did Eliza play as an early bot?","answer":"Eliza acted as a computer therapist."}
+{"question":"What is the best-known clustering algorithm?","answer":"The best-known clustering algorithm is k-means."}
+{"question":"What type of tool is used to play out different scenarios of potential states in a game?","answer":"Simulation environments"}
+{"question":"Where are all possible actions in an environment defined?","answer":"Action space"}
+{"question":"When using K-Means, is it necessary to determine the value of 'k' beforehand?","answer":"Yes, when using K-Means, you must first determine the value of 'k'."}
+{"question":"What factor contributed to the slowdown of AI advancements in the 1970s?","answer":"Limited compute power was a reason that advancement in AI slowed in the 1970s."}
+{"question":"What does the term 'unfairness' typically imply in the context of Machine Learning?","answer":"The term 'unfairness' in ML refers to harms affecting a group of people."}
+{"question":"What is the primary benefit of balancing data in machine learning?","answer":"Balancing data yields better results because a machine learning model won't skew towards one class."}
+{"question":"Define what a policy is in the context of reinforcement learning.","answer":"A policy is a function that returns the action at any given state."}
+{"question":"What is the primary concept that machine learning algorithms are designed to simulate?","answer":"Machine learning algorithms are designed to simulate the human brain."}
+{"question":"What functionality does the Fairlearn package provide?","answer":"Fairlearn is a package that can compare multiple models by using fairness and performance metrics."}
+{"question":"What kind of Correlation Coefficient does a good Linear Regression model possess?","answer":"A high Correlation Coefficient"}
+{"question":"For what might recommendation systems be used?","answer":"Recommending a good restaurant and Recommending fashions to try."}
+{"question":"What kind of values in a Q-Table correspond to the random walk policy?","answer":"All equal values in a Q-Table correspond to the random walk policy."}
+{"question":"Around what time period was the term 'artificial intelligence' first used?","answer":"The term 'artificial intelligence' was coined in the 1950s."}
+{"question":"During the learning process, was it better to use exploration or exploitation?","answer":"It was better to use exploitation than exploration during the learning process."}
+{"question":"What does the term 'N-grams' refer to in the context of text analysis?","answer":"N-grams refer to splitting a text into sequences of words of a set length."}
+{"question":"What are some reasons a business might implement machine learning strategies?","answer":"Businesses might use ML strategies to automate the solving of multi-dimensional problems and to customize experiences based on customer types."}
+{"question":"In what areas is Time Series Forecasting useful?","answer":"Time Series Forecasting is useful in determining future costs and predicting future pricing."}
+{"question":"Question:\nIn the context of machine learning, what is a 'solver'?","answer":"The algorithm to use in the optimization problem"}
+{"question":"What is a data cleaning strategy?","answer":"Removing columns\/rows that aren't useful for answering a specific question is a data cleaning strategy."}
+{"question":"What type of machine learning technique shares similarities with classification?","answer":"Classification, a form of supervised learning, has a lot in common with regression techniques."}
+{"question":"How would a machine learning approach be used to determine sentiment?","answer":"To determine sentiment, an ML approach would be to apply NLP techniques to manually generated opinions and scores and look for patterns."}
+{"question":"What is the purpose of Python's Pickle module?","answer":"The Pickle module serializes and deserializes Python objects."}
+{"question":"How does a Support Vector Regression (SVR) model learn?","answer":"It learns by finding the best fit hyperplane that has the maximum number of data points."}
+{"question":"Is it important to remove recurrent or unhelpful data to improve classifier performance?","answer":"Yes, it is important to clean out recurrent or unhelpful data to help classifiers solve the problem."}
+{"question":"What is the full name of ONNX?","answer":"ONNX stands for Open Neural Network Exchange."}
+{"question":"What does Inertia measure in the context of clustering?","answer":"Inertia is a measure of how internally coherent clusters are."}
+{"question":"Why is it important to visualize data?","answer":"Visualizing data allows for the discovery of outliers and potential causes of bias."}
+{"question":"What is a multiclass question in the context of machine learning?","answer":"A multiclass question is the task of classifying data points into one of several classes."}
+{"question":"What does SVM stand for?","answer":"Support Vector Machine"}
+{"question":"How closely should an ARIMA model fit the special form of time series data?","answer":"ARIMA is used to make a model fit the special form of time series data as closely as possible."}
+{"question":"What geometric shape does Linear Regression use to plot relationships between variables?","answer":"A straight line"}
+{"question":"What is an example of using Time Series analysis for energy management?","answer":"Smart parking meters"}
+{"question":"What is the primary technical distinction between classical machine learning and deep learning?","answer":"Deep learning utilizes neural networks, while classical machine learning does not."}
+{"question":"What does the acronym SaaS represent?","answer":"SaaS stands for Software as a Service."}
+{"question":"What type of ARIMA models does SARIMAX manage?","answer":"SARIMAX manages seasonal ARIMA models."}
+{"question":"What does a *corpus* of texts refer to?","answer":"A *corpus* of texts refers to a large number of texts."}
+{"question":"What should one build to check how often words reoccur?","answer":"Word and Phrase Frequencies"}
+{"question":"Is categorizing data using a Tag column useful?","answer":"Yes, it can be useful."}
+{"question":"What does a Voronoi diagram illustrate regarding clusters?","answer":"A Voronoi diagram shows a cluster's seed and its region."}
+{"question":"For what can Onnx Runtime be used?","answer":"Running models in a web app."}
+{"question":"How is a time series defined in terms of data points?","answer":"A time series is a sequence taken at successive equally spaced points in time."}
+{"question":"Which model considers the non-linearity in the dataset?","answer":"Support Vector Regression (SVR) using the Radial Basis Function (RBF) kernel considers non-linearity in the dataset."}
+{"question":"What characterizes a feature variable in a dataset?","answer":"A feature variable is a measurable property of your data."}
+{"question":"What is Adaboost known for?","answer":"Focusing on the weights of incorrectly classified items."}
+{"question":"What is required to use the `blob.translate` function in TextBlob?","answer":"To use `blob.translate` you need an internet connection."}
+{"question":"What are the five primary categories of harms that are often considered in the context of unfairness in machine learning?","answer":"The five main types of harms include allocation, quality of service, stereotyping, denigration, and over- or under- representation."}
+{"question":"What did Alan Turing's 'Turing Test' aim to determine about a computer?","answer":"The Turing Test tried to determine if a computer's responses were indistinguishable from a human's and if it was capable of thinking."}
+{"question":"What does naive translation primarily focus on?","answer":"Naive translation translates words only."}

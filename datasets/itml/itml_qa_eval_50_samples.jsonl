@@ -1,0 +1,50 @@
+{"question":"What is the primary function of Natural Language Processing (NLP)?","answer":"NLP is about interpreting meaning or sentiment without human intervention."}
+{"question":"What type of Regression is best to use when the data has weak correlations?","answer":"Logistic Regression is the best type of Regression to use when the data has weak correlations."}
+{"question":"What does NLP stand for in the context of these lessons?","answer":"Natural Language Processing"}
+{"question":"How can a machine learning model leverage human translations to improve?","answer":"If a machine learning model has enough human translations to build a model on, it can improve the accuracy of translations."}
+{"question":"On what basis does a conversational bot generate output?","answer":"A conversational bot gives output based on analyzing the input and using machine intelligence, or by randomly choosing predefined choices."}
+{"question":"What is the purpose of Parts-of-Speech Tagging?","answer":"Parts-of-Speech Tagging takes tokenized words and tags them by their part of speech."}
+{"question":"Describe reinforcement learning.","answer":"Reinforcement learning is a learning technique that deciphers the optimal behavior of an agent in some environment by running many experiments."}
+{"question":"What are some examples of Regression methods?","answer":"Stepwise, Ridge, Lasso and Elasticnet are examples of Regression methods."}
+{"question":"What type of library is Matplotlib?","answer":"A data visualization library"}
+{"question":"Does embedding a model in a web app help it to be offline-capable?","answer":"Yes."}
+{"question":"What type of learning is clustering?","answer":"Clustering is a type of unsupervised learning."}
+{"question":"Using a dataset of hotel reviews, Python, and sentiment analysis, what type of analysis could be performed to identify frequently used words and phrases?","answer":"One could identify the most frequently used words and phrases in the reviews."}
+{"question":"Define sentiment analysis.","answer":"Sentiment analysis is a method of systematically identifying, extracting, quantifying, and studying affective states and subjective information."}
+{"question":"What aspects of your data can impact the quality of your machine learning model?","answer":"Both the quantity and shape of your data will impact the quality of your ML model."}
+{"question":"What is an example of a machine learning application in the finance industry?","answer":"Wealth management using linear regression"}
+{"question":"Which machine learning technique is used to predict continuous values?","answer":"Regression"}
+{"question":"Why is it important to clean data before analyzing it?","answer":"Some columns might have missing or incorrect data, and messy data can lead to false conclusions about the dataset."}
+{"question":"What type of question can classification help answer?","answer":"Classification can help answer the question of whether an email is spam or not."}
+{"question":"Which type of problem is predicting the final exam marks of a student, regression or classification?","answer":"Predicting the final exam marks of a student is a Regression analysis-based problem."}
+{"question":"What are some steps one can take to address unfairness in machine learning models?","answer":"To mitigate unfairness, you can identify harms and affected groups and define fairness metrics."}
+{"question":"Along what geometric structure is Euclidean geometry arranged?","answer":"Euclidean geometry is arranged along planes."}
+{"question":"What is the name of the process of splitting a dataset into training and testing sets using Scikit Learn's 'train_test_split()' method\/function?","answer":"This process is called Hold-Out Validation."}
+{"question":"Which Python module is commonly employed for visualizing data?","answer":"Matplotlib"}
+{"question":"What is one example of a technology developed during 'The Golden Years' of AI?","answer":"Blocks world"}
+{"question":"Question:\nWhich classifier was used in this lesson?","answer":"Logistic Regression"}
+{"question":"What translation library underlies TextBlob's translation functionality?","answer":"Underlying TextBlob's translation library is Google Translate."}
+{"question":"Describe the CartPole problem.","answer":"The CartPole problem is a simplified version of balancing."}
+{"question":"What aspect of a dataset cannot be determined through Data Visualization?","answer":"The source from where the dataset is collected"}
+{"question":"What are the typical sets into which data is split for machine learning?","answer":"Data is typically split into training and test sets."}
+{"question":"Question:\nWhat is a good initial classifier to try?","answer":"Linear SVC"}
+{"question":"Which machine learning technique can be used to detect credit card fraud?","answer":"Clustering"}
+{"question":"What are the reasons for learning the basics of machine learning?","answer":"Learning ML is both fun and accessible and because ML strategies are used in many industries."}
+{"question":"Question:\nFor what type(s) of learning can K-Neighbors classifier be used?","answer":"Supervised and unsupervised learning"}
+{"question":"Which specific event played a fundamental role in the emergence and growth of the field of artificial intelligence?","answer":"Dartmouth Summer Research Project"}
+{"question":"What process is involved in 'Walk-Forward' validation?","answer":"'Walk-Forward' validation involves re-training a model progressively as it is validated."}
+{"question":"Question:\nFor what type(s) of task(s) can Support-Vector classifiers be used?","answer":"Classification and regression"}
+{"question":"Describe Q-Learning.","answer":"Q-Learning is both a mechanism for recording the 'goodness' of each state and an algorithm where the policy is defined by a Q-Table."}
+{"question":"Does a reward function return a score for each state of an environment?","answer":"Yes, a reward function returns a score for each state of an environment."}
+{"question":"From what field is K-Means derived?","answer":"K-Means is derived from signal processing."}
+{"question":"Are machine learning applications prevalent in today's world?","answer":"True"}
+{"question":"What is meant by stationarity in the context of data analysis?","answer":"Stationarity refers to data whose distribution does not change when shifted in time."}
+{"question":"To what attribute of clustering data is its density related?","answer":"The density of clustering data is related to its noise."}
+{"question":"What is the function of Scikit-learn's LabelEncoder library?","answer":"Scikit-learn's LabelEncoder library encodes data alphabetically."}
+{"question":"What is a real-life example of clustering?","answer":"Sorting the laundry"}
+{"question":"What process do you perform to understand the spread and other characteristics of data points in a dataset?","answer":"Data Visualization"}
+{"question":"Could you provide an example of a classical machine learning technique?","answer":"An example of a classical machine learning technique is natural language processing."}
+{"question":"Which machine learning technique is exemplified in forest management?","answer":"Reinforcement Learning"}
+{"question":"In which applications can time series analysis be utilized?","answer":"Time series can be used in earthquake prediction."}
+{"question":"Question:\nWhat factors should be considered when choosing the right classifier?","answer":"Understanding which classifiers work best for which scenarios, and educated guess and check."}
+{"question":"Which bot was invented by Joseph Weizenbaum?","answer":"Joseph Weizenbaum invented the Eliza bot."}

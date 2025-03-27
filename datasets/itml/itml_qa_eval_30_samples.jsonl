@@ -1,0 +1,30 @@
+{"question":"What is the primary function of Natural Language Processing (NLP)?","answer":"NLP is about interpreting meaning or sentiment without human intervention."}
+{"question":"From what field is K-Means derived?","answer":"K-Means is derived from signal processing."}
+{"question":"For what field is Time Series Forecasting most beneficial?","answer":"Time Series Forecasting is most useful for Econometrics."}
+{"question":"What process is involved in 'Walk-Forward' validation?","answer":"'Walk-Forward' validation involves re-training a model progressively as it is validated."}
+{"question":"What is the name of the process of splitting a dataset into training and testing sets using Scikit Learn's 'train_test_split()' method\/function?","answer":"This process is called Hold-Out Validation."}
+{"question":"Which bot was invented by Joseph Weizenbaum?","answer":"Joseph Weizenbaum invented the Eliza bot."}
+{"question":"What does the Netron app help you do?","answer":"Visualize your model's structure."}
+{"question":"How is Flask defined by its creators?","answer":"Flask is defined as a micro-framework by its creators."}
+{"question":"In Least-Squares Regression, what operation is performed on the datapoints surrounding the regression line?","answer":"In Least-Squares Regression, the datapoints surrounding the regression line are squared and then added up."}
+{"question":"Describe Q-Learning.","answer":"Q-Learning is both a mechanism for recording the 'goodness' of each state and an algorithm where the policy is defined by a Q-Table."}
+{"question":"To what attribute of clustering data is its density related?","answer":"The density of clustering data is related to its noise."}
+{"question":"In the context discussed, what served as the dictionary key, and what was its corresponding value?","answer":"(state, action) as the key, Q-Table entry as the value"}
+{"question":"What translation library underlies TextBlob's translation functionality?","answer":"Underlying TextBlob's translation library is Google Translate."}
+{"question":"Using a dataset of hotel reviews, Python, and sentiment analysis, what type of analysis could be performed to identify frequently used words and phrases?","answer":"One could identify the most frequently used words and phrases in the reviews."}
+{"question":"What does NLP stand for in the context of these lessons?","answer":"Natural Language Processing"}
+{"question":"Describe the CartPole problem.","answer":"The CartPole problem is a simplified version of balancing."}
+{"question":"How can you validate sentiment analysis results?","answer":"You can test the sentiment analysis to make sure it matches the reviewer's score for the same review."}
+{"question":"What is a common source of unfairness in machine learning models?","answer":"Over-reliance on historical data can cause unfairness in a model."}
+{"question":"Which machine learning technique is exemplified in forest management?","answer":"Reinforcement Learning"}
+{"question":"What tools can be used with Python to host a pre-trained model on the web?","answer":"Flask can be used to host a pre-trained model on the web using Python."}
+{"question":"Which specific event played a fundamental role in the emergence and growth of the field of artificial intelligence?","answer":"Dartmouth Summer Research Project"}
+{"question":"How are outliers defined in a dataset?","answer":"Outliers are points far away from standard data variance."}
+{"question":"What is the purpose of tokenization in NLP?","answer":"Tokenization splits text into separate tokens (words)."}
+{"question":"Question:\nHow can you assess if a classification algorithm is performing as expected?","answer":"By checking the accuracy of its predictions"}
+{"question":"How are time series trends characterized?","answer":"Time series trends are measurable increases and decreases over time."}
+{"question":"Which of the following is considered a numeric variable: Height, Gender, or Hair Color?","answer":"Height is a numeric variable."}
+{"question":"Which of the following is a categorical variable: Heart Rate, Blood Type, or Weight?","answer":"Blood Type is a categorical variable."}
+{"question":"What is using your model in a web app called?","answer":"Inference"}
+{"question":"On what basis does a conversational bot generate output?","answer":"A conversational bot gives output based on analyzing the input and using machine intelligence, or by randomly choosing predefined choices."}
+{"question":"What's an example of a machine learning application in the health care industry?","answer":"Managing clinical trials using classifiers"}

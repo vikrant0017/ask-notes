@@ -1,0 +1,10 @@
+{"question":"What is the process of identifying the most relevant features from a set of features called?","answer":"The process of identifying significant features from a set of features is called Feature Selection."}
+{"question":"What's an example of a machine learning application in the health care industry?","answer":"Managing clinical trials using classifiers"}
+{"question":"In the context of text analysis, what are stop words?","answer":"Stop words are common English words that do not change the sentiment of a sentence and can be removed to speed up sentiment analysis."}
+{"question":"What is the name of the process of splitting a dataset into training and testing sets using Scikit Learn's 'train_test_split()' method\/function?","answer":"This process is called Hold-Out Validation."}
+{"question":"Which specific event played a fundamental role in the emergence and growth of the field of artificial intelligence?","answer":"Dartmouth Summer Research Project"}
+{"question":"Define sentiment analysis.","answer":"Sentiment analysis is a method of systematically identifying, extracting, quantifying, and studying affective states and subjective information."}
+{"question":"What does the acronym ARIMA stand for?","answer":"ARIMA stands for AutoRegressive Integrated Moving Average."}
+{"question":"What are some examples of Regression methods?","answer":"Stepwise, Ridge, Lasso and Elasticnet are examples of Regression methods."}
+{"question":"What are the reasons for learning the basics of machine learning?","answer":"Learning ML is both fun and accessible and because ML strategies are used in many industries."}
+{"question":"Does a reward function return a score for each state of an environment?","answer":"Yes, a reward function returns a score for each state of an environment."}
