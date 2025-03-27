@@ -24,11 +24,14 @@ class ResponseGenerator(weave.Model):
         super().__init__(**kwargs)
         self.llm = ChatOllama(model=self.model, temperature=0.0, verbose=False)
 
-    @weave.op()
-    def predict(self, query: str, context: str | List[str]):
+    def query(self, query: str, context: str | List[str]):
         if isinstance(context, List):
             context = "\n".join(context)
 
         augmented_query = self.prompt.invoke({"context": context, "question": query})
 
         return self.llm.invoke(augmented_query)
+    
+    @weave.op()
+    def predict(self, input: str, retrieval_context: str | List[str]):
+        return self.query(input, retrieval_context)

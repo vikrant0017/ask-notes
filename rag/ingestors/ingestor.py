@@ -1,72 +1,52 @@
-from langchain.text_splitter import CharacterTextSplitter
-from langchain_community.document_loaders import DirectoryLoader
-from langchain_unstructured import UnstructuredLoader
-from langchain_core.documents import Document
+from unstructured.partition.auto import partition
 from typing import List
+from rag.utils import el_to_doc
 
-"""
-The UnstructuredLoader is a wrapper for the unstructured package. Refer to the package documentation for 
-features and usage details.
-"""
 
 class SimpleIngestor:
-    def load_dir(self, dirname):
-        """Load and chunk all types of files in the provided directory"""
-        dir_loader = DirectoryLoader(
-            path=dirname,
-            glob=["**/*.md", "**/*.txt"],
-            loader_cls=UnstructuredLoader,
-            loader_kwargs={
-                "chunking_strategy": "basic",
-                "max_characters": 100000,
-                "include_orig_elements": False,
-            },
-        )
-        docs = dir_loader.load()
-        splitter = CharacterTextSplitter(
-            chunk_size=1, chunk_overlap=0, separator="."
-        )
-        chunks = splitter.split_documents(docs)
-        return chunks
+    """
+    This class leverages the Unstructured open-source library to parse files.
+    Unlike LangChain's Unstructured integration, this implementation provides
+    greater flexibility by decoupling chunking from partitioning. This design
+    allows the chunking strategy to be part of the retriever class, which is
+    responsible for storing and retrieving embedded chunks.
 
-    # https://python.langchain.com/docs/integrations/providers/unstructured/
-    def load_file(self, file_path: str | List[str]):
-        """Load and chunk all files provided by the paths. The path can be a single file path
-        or a list of file paths"""
-        # https://docs.unstructured.io/open-source/core-functionality/chunking
-        # The parameters below are directly from unstructured chunking api. It is a basic chunking
-        # strategy which only chunks the raw texts and not semantic elemeents and returns the entire
-        # document as a single chunk
+    While chunking could be disabled by setting a sufficiently high max chunk
+    size, LangChain's integration returns data as a Document type, which is
+    incompatible with the chunking methods provided by the Unstructured library.
+    To address this, a helper function was created to facilitate conversion
+    between formats.
+    """
 
+    def load_dir(self, dirname: str | List[str]): ...
+
+    def _validate_filetype(self, file_path: str | List[str]):
         if isinstance(file_path, str):
             ext = file_path.split(".")[-1]
-            if ext not in ("txt", "md"):
+            if ext not in ("txt", "md", "pdf"):
                 raise Exception("Invalid file extension")
 
         if isinstance(file_path, list):
             for f in file_path:
                 ext = f.split(".")[-1]
-                if ext not in ("txt", "md"):
+                if ext not in ("txt", "md", "pdf"):
                     raise Exception("Invalid file extension")
 
-        unstructured_loader = UnstructuredLoader(
-            file_path=file_path,
-            chunking_strategy="basic",
-            max_characters=100000,
-            include_orig_elements=False,
-        )
+    def load_file(self, file_path: str | List[str] = None, file=None):
+        """Load and chunk all files provided by the paths. The path can be a single file path
+        or a list of file paths."""
 
-        docs = unstructured_loader.load()
-        splitter = CharacterTextSplitter(
-            chunk_size=1, chunk_overlap=0, separator="."
-        )
-        chunks = splitter.split_documents(docs)
-        return chunks
+        if file_path is not None:
+            self._validate_filetype(file_path)
+            if isinstance(file_path, list):
+                elements = []
+                for path in file_path:
+                    elements.extend(partition(path))
 
-    def load_text(self, text: str):
-        splitter = CharacterTextSplitter(
-            chunk_size=1, chunk_overlap=0, separator="."
-        )
-        docs = [Document(text)]
-        chunks = splitter.split_documents(docs)
-        return chunks
+            if isinstance(file_path, str):
+                elements = partition(file_path)
+
+        if file is not None:
+            elements = partition(file=file)
+
+        return el_to_doc(elements)
