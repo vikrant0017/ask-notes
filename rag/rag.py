@@ -15,7 +15,7 @@ class RAG:
 
     def query(self, query):
         contexts = self.retriever.query(query)
-        response = self.generator.predict(query, context=self._format_docs(contexts))
+        response = self.generator.query(query, context=self._format_docs(contexts))
         contexts = [doc.page_content for doc in contexts]
         return response, contexts
 
