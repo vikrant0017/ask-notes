@@ -14,8 +14,8 @@ Before you begin, ensure you have the following installed:
 
 1.  **Clone the repository:**
     ```bash
-    git clone <your-repository-url>
-    cd <your-repository-directory>
+    git clone https://github.com/vikrant0017/ask-notes.git
+    cd ask-notes
     ```
 
 2.  **Run the setup script:**
