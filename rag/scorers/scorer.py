@@ -9,7 +9,7 @@ from ragas.llms import LangchainLLMWrapper
 from langchain_core.messages import BaseMessage
 from langchain_core.documents import Document
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 LLM_MODEL = "gemini-2.0-flash-lite"
 
 # This is specific to Google gemini API RPM of 30rpm.
@@ -21,7 +21,7 @@ rate_limiter = InMemoryRateLimiter(
 )
 
 eval_llm = ChatGoogleGenerativeAI(
-    model=LLM_MODEL, api_key=GEMINI_API_KEY, temperature=0, rate_limiter=rate_limiter
+    model=LLM_MODEL, api_key=GOOGLE_API_KEY, temperature=0, rate_limiter=rate_limiter
 )
 
 evaluator_llm = LangchainLLMWrapper(eval_llm)

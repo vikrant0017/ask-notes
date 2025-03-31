@@ -12,7 +12,7 @@ from langchain_google_genai import GoogleGenerativeAIEmbeddings
 load_dotenv()
 
 EMBEDDING_MODEL = "models/text-embedding-004"
-API_KEY = os.getenv('GEMINI_API_KEY')
+API_KEY = os.getenv('GOOGLE_API_KEY')
 CHROMA_DIR = 'docs/chroma'
 LLM_MODEL = 'gemini-2.0-flash-exp'
 
