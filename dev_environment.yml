@@ -1,0 +1,25 @@
+name: rag_dev
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - langchain=0.3.21
+  - unstructured=0.17.2
+  - pydantic=2.10.6
+  - sentence-transformers=3.4.1
+  - langchain-community=0.3.20
+  - langchain-chroma=0.2.2
+  - streamlit=1.43.2
+  - pypdf2=3.0.1
+  - google-generativeai=0.8.4
+  - python-dotenv
+  - pip
+  - pip:
+    - weave==0.51.39
+    - langchain-ollama==0.3.0
+    - unstructured[md]
+    - unstructured[pdf]
+    - deepeval==2.6.5
+    - langchain-google-genai==2.1.2
+    - limiter==0.5.0

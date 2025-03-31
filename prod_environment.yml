@@ -1,0 +1,20 @@
+name: rag_prod
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.12
+  - langchain=0.3.21
+  - unstructured=0.17.2
+  - pydantic=2.10.6
+  - sentence-transformers=3.4.1
+  - langchain-community=0.3.20
+  - langchain-chroma=0.2.2
+  - streamlit=1.43.2
+  - pypdf2=3.0.1
+  - pip
+  - pip:
+    - weave==0.51.39
+    - langchain-ollama==0.3.0
+    - unstructured[md]
+    - unstructured[pdf]
