@@ -1,30 +1,23 @@
-from deepeval.test_case import LLMTestCase
-from deepeval import evaluate
+import weave
 from deepeval.metrics import (
+    # Generator Metrics
+    AnswerRelevancyMetric,
+    FaithfulnessMetric,
     # Retrival metrics
     ContextualPrecisionMetric,
     ContextualRecallMetric,
     ContextualRelevancyMetric,
-    # Generator Metrics
-    AnswerRelevancyMetric,
-    FaithfulnessMetric,
 )
-import os
-from typing import Any, List
-import weave
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_core.rate_limiters import InMemoryRateLimiter
-from langchain_core.messages import BaseMessage
-from langchain_core.documents import Document
-from deepeval.metrics import GEval
+from deepeval.test_case import LLMTestCase
 
+from rag.common.registry import registry
 from rag.llms.gemini import GeminiChat
 
-# LLM_MODEL = "gemini-2.0-flash"
-# EMBEDDING_MODEL = "models/text-embedding-004"
-# model = GeminiChat(LLM_MODEL)
+LLM_MODEL = "gemini-2.0-flash"
+EMBEDDING_MODEL = "models/text-embedding-004"
+model = GeminiChat(LLM_MODEL)
 
-model = 'gpt-4o'
+# model = 'gpt-4o'
 
 # test_case = LLMTestCase(
 #     input="I'm on an F-1 visa, how long can I stay in the US after graduation?",
@@ -59,6 +52,7 @@ The input and actual_output are required to create an LLMTestCase
 """
 
 @weave.op()
+@registry.register_scorer('faithfulness')
 async def faithfulness(
     input: str, output: str, retrieval_context: str
 ):  # use param name output as per new docs not model_output
@@ -71,6 +65,7 @@ async def faithfulness(
 
 
 @weave.op()
+@registry.register_scorer('answer_relevancy')
 async def answer_relevancy(input: str, output: str):
     # retrieval_context=output['retrieval_context']
     scorer = AnswerRelevancyMetric(model=model)
@@ -83,6 +78,7 @@ Retriever Metric
 """
 
 @weave.op()
+@registry.register_scorer('contextual_precision')
 async def contextual_precision(input: str, output: str, expected_output: str):
     scorer = ContextualPrecisionMetric(model=model)
     test_case = LLMTestCase(
@@ -96,6 +92,7 @@ async def contextual_precision(input: str, output: str, expected_output: str):
 
 
 @weave.op()
+@registry.register_scorer('contextual_recall')
 async def contextual_recall(input: str, output: str, expected_output):
     scorer = ContextualRecallMetric(model=model)
     test_case = LLMTestCase(
@@ -109,6 +106,7 @@ async def contextual_recall(input: str, output: str, expected_output):
 
 
 @weave.op()
+@registry.register_scorer('contextual_relevancy')
 async def contextual_relevancy(input: str, output: str):
     scorer = ContextualRelevancyMetric(model=model)
     test_case = LLMTestCase(

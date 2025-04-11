@@ -1,0 +1,53 @@
+evaluation_name: 'Test Evaluation'
+generator:
+  name: "ResponseGenerator"
+  params:
+    model: "qwen2.5:3b"
+    hello: "world"
+    # prompt_template: ....
+ingestor:
+  name: "SimpleIngestor"
+  params: {}
+retriever:
+  name: "reranker"
+  params:
+    model: "nomic-embed-text" # Embedding model
+    cross_encoding_model: "cross-encoder/ms-marco-MiniLM-L6-v2"
+    k: 3
+    fetch_k: 8
+    chunker:
+      name: "by_title_chunking"
+      params:
+        max_characters: 1500
+        new_after_n_chars: 1000
+        combine_text_under_n_characters: 300
+# retriever:
+  # name: "SimpleRetriever"
+  # params:
+  #   model: "nomic-embed-text"
+  #   k: 3
+  #   chunker:
+  #     name: "by_title_chunking"
+  #     params:
+  #       max_characters: 1500
+  #       new_after_n_chars: 1000
+  #       combine_text_under_n_characters: 300
+
+scorers:
+  retriever: 
+    - contextual_relevancy
+  generator: 
+    - faithfulness
+corpus:
+  # path: Neural Network Training Recipe.md # dir or path
+  # path:  # TODO: Allow multiple paths
+  #   - Corpus1
+  #   - Corpus2
+  path: intro-to-ml-notes
+
+dataset: # needs to be a path inside datasets directory
+  path: itml_mcq_2_samples.jsonl
+  column_mapping:
+    input: question
+    expected_output: answer
+    # retrival_context: context

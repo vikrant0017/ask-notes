@@ -1,12 +1,7 @@
 from typing import List, Optional
 
 import weave
-from langchain.retrievers.contextual_compression import ContextualCompressionRetriever
-from langchain.retrievers.document_compressors.cross_encoder_rerank import (
-    CrossEncoderReranker,
-)
 from langchain_chroma import Chroma
-from langchain_community.cross_encoders import HuggingFaceCrossEncoder
 from langchain_community.vectorstores.utils import filter_complex_metadata
 from langchain_core.documents import Document
 from langchain_core.vectorstores import VectorStore, VectorStoreRetriever
@@ -18,17 +13,17 @@ from rag.common.registry import registry
 from rag.retrievers.base import BaseRetriever
 
 
-@registry.register_retriever('reranker')
-class Reranker(weave.Model, BaseRetriever): 
-    cross_encoding_model: str = Field(default='cross-encoder/ms-marco-MiniLM-L6-v2', description='Hugging face model name')
-    model: str = 'nomic-embed-text'
-    fetch_k:int = 6
-    k: int = 3
-    vector_db: Optional[VectorStore] = Field(default=None, init=None)
-    chunker: Optional[BaseChunkingStrategy] = Field(default=None, init=None)
+@registry.register_retriever('mmr')
+class MMR(weave.Model, BaseRetriever):
+    # Initialize parameters with proper type hints
+    model: str
+    vector_db: Optional[VectorStore] = None
+    fetch_k: int = 1
+    k: int = 1
+    diversity: float = Field(default=0.5, ge=0.0, le=1.0, description="Diversity parameter (0=max diversity, 1=min diversity)")
+    chunker: Optional[BaseChunkingStrategy] = None
+    _retriever: Optional[VectorStoreRetriever] = PrivateAttr(default=None)
     docs: Optional[List[Document]] = None
-
-    _retriever: VectorStoreRetriever = PrivateAttr(default=None)
 
     def model_post_init(self, __context):
         self.init_retriever(self.docs)
@@ -44,12 +39,12 @@ class Reranker(weave.Model, BaseRetriever):
         if docs is not None:
             self.add_docs(docs)
 
-        # https://python.langchain.com/docs/integrations/document_transformers/cross_encoder_reranker/
-        retriever = self.vector_db.as_retriever(search_kwargs={"k": self.fetch_k})
-        model = HuggingFaceCrossEncoder(model_name=self.cross_encoding_model)
-        compressor = CrossEncoderReranker(model=model, top_n=self.k)
-        self._retriever = ContextualCompressionRetriever( # Combiens and passes docuemtns for compressesion 
-            base_compressor=compressor, base_retriever=retriever
+        self._retriever = self.vector_db.as_retriever(
+            search_type='mmr', search_kwargs={
+                'k': self.k,
+                'fetch_k': self.fetch_k,
+                'lambda_mult': self.diversity
+            }
         )
 
     def add_docs(self, docs: List[Document], chunker: Optional[BaseChunkingStrategy] = None):

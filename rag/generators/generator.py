@@ -1,10 +1,15 @@
 from typing import List
-from langchain_ollama import ChatOllama
-from langchain.prompts import PromptTemplate
+
 import weave
+from langchain.prompts import PromptTemplate
+from langchain_ollama import ChatOllama
+
+from rag.common.registry import registry
+from rag.generators.base import BaseGenerator
 
 
-class ResponseGenerator(weave.Model):
+@registry.register_generator('ResponseGenerator')
+class ResponseGenerator(weave.Model, BaseGenerator):
     model: str
     _template: str = (
         "Use the following pieces of context to answer the question at the end. "
@@ -34,4 +39,8 @@ class ResponseGenerator(weave.Model):
     
     @weave.op()
     def predict(self, input: str, retrieval_context: str | List[str]):
-        return self.query(input, retrieval_context)
+        res = self.query(input, retrieval_context)
+        return res.content
+
+
+    

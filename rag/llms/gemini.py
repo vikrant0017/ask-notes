@@ -4,7 +4,6 @@ from deepeval.models import DeepEvalBaseLLM
 from dotenv import load_dotenv
 from pydantic import BaseModel
 from limiter import Limiter
-from datetime import datetime
 from tenacity import Retrying, wait_exponential, AsyncRetrying
 
 load_dotenv()
@@ -45,7 +44,6 @@ class GeminiChat(DeepEvalBaseLLM):
 
     @limiter
     async def a_generate(self, prompt: str, schema: BaseModel) -> str:
-        print(f"Current time: {datetime.now()}")
         client = self.load_model()
         instructor_client = instructor.from_gemini(
             client=client, mode=instructor.Mode.GEMINI_JSON, use_async=True

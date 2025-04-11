@@ -13,6 +13,7 @@ dependencies:
   - streamlit=1.43.2
   - pypdf2=3.0.1
   - google-generativeai=0.8.4
+  - pyyaml=6.0.2
   - python-dotenv
   - pip
   - pip:

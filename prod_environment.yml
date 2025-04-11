@@ -12,6 +12,7 @@ dependencies:
   - langchain-chroma=0.2.2
   - streamlit=1.43.2
   - pypdf2=3.0.1
+  - pyyaml=6.0.2
   - pip
   - pip:
     - weave==0.51.39
